@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm - Đặc Sản Tây Nguyên</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Đặc Sản Tây Nguyên</h1>
+        <nav>
+            <a href="index.html">Trang chủ</a> | 
+            <a href="products.html">Sản phẩm</a> | 
+            <a href="product-detail.html">Chi tiết sản phẩm</a> | 
+            <a href="contact.html">Liên hệ</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Chi Tiết Sản Phẩm</h2>
+
+        <article class="product-detail">
+            <img src="images/ca-phe-buon-ma-thuot.jpg" alt="Cà phê Buôn Ma Thuột" width="300">
+            
+            <div class="product-info">
+                <h3>Cà Phê Buôn Ma Thuột Nguyên Chất</h3>
+                <p><strong>Giá:</strong> 150.000 VNĐ / Hộp 500g</p>
+                <p><strong>Xuất xứ:</strong> Buôn Ma Thuột, Đắk Lắk</p>
+                <p><strong>Mô tả:</strong> Cà phê Robusta rang xay nguyên chất 100%, hạt cà phê được chọn lọc kỹ lưỡng từ vùng đất đỏ bazan. Hương vị đậm đà, thơm nồng đặc trưng của núi rừng Tây Nguyên.</p>
+                
+                <form action="contact.html" method="GET">
+                    <label for="quantity">Số lượng:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100">
+                    <button type="submit">Đặt mua ngay</button>
+                </form>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>Liên hệ: 0905 123 456 | Email: dacsantaynguyen@gmail.com</p>
+        <p>&copy; 2026 Bản quyền thuộc về Nhóm K - ĐHTN</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
