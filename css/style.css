@@ -1,0 +1,161 @@
+/* --- Cấu hình chung --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f6f0;
+    padding: 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #5c3a21;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 24pt;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffd8a8;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- Main content --- */
+main {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #5c3a21;
+    border-bottom: 2px solid #8b5a2b;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2e5a27;
+    margin: 10px 0;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* --- Bố cục sản phẩm --- */
+.featured, .products, .product-grid {
+    display: table;
+    width: 100%;
+}
+
+.product, article {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 1%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.product img, article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product p, article p {
+    margin: 8px 0;
+}
+
+/* --- Nút bấm & Liên kết --- */
+a.btn, .product a, article a, button {
+    display: inline-block;
+    background-color: #2e5a27;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 10pt;
+}
+
+a.btn:hover, .product a:hover, article a:hover, button:hover {
+    background-color: #1e3d1a;
+}
+
+/* --- Form tìm kiếm, lọc & liên hệ --- */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="tel"], input[type="number"], select, textarea {
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* --- Trang Chi tiết sản phẩm --- */
+.product-detail {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.product-detail img {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    overflow: hidden;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 9pt;
+}
+
+footer p {
+    margin: 5px 0;
+}
