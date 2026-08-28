@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Sản Phẩm - Đặc Sản Tây Nguyên</title>
+    <title>Chi Tiết Cà Phê Buôn Ma Thuột - Đặc Sản Tây Nguyên</title>
+    <meta name="description" content="Thông tin chi tiết, xuất xứ, khối lượng và hướng dẫn sử dụng Cà Phê Buôn Ma Thuột.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Đặc Sản Tây Nguyên</h1>
+        <div class="logo">
+            <h1>Đặc Sản Tây Nguyên</h1>
+            <p>Tinh hoa núi rừng trong từng sản phẩm</p>
+        </div>
         <nav>
             <a href="index.html">Trang chủ</a> | 
             <a href="products.html">Sản phẩm</a> | 
@@ -18,25 +22,71 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Chi Tiết Sản Phẩm</h2>
+    <main class="product-detail-layout">
+        <!-- Tiêu đề <h1> bắt buộc -->
+        <h1>Cà Phê Buôn Ma Thuột Rang Xay Nguyên Chất</h1>
 
-        <article class="product-detail">
-            <img src="images/ca-phe-buon-ma-thuot.jpg" alt="Cà phê Buôn Ma Thuột" width="300">
-            
-            <div class="product-info">
-                <h3>Cà Phê Buôn Ma Thuột Nguyên Chất</h3>
-                <p><strong>Giá:</strong> 150.000 VNĐ / Hộp 500g</p>
-                <p><strong>Xuất xứ:</strong> Buôn Ma Thuột, Đắk Lắk</p>
-                <p><strong>Mô tả:</strong> Cà phê Robusta rang xay nguyên chất 100%, hạt cà phê được chọn lọc kỹ lưỡng từ vùng đất đỏ bazan. Hương vị đậm đà, thơm nồng đặc trưng của núi rừng Tây Nguyên.</p>
-                
-                <form action="contact.html" method="GET">
-                    <label for="quantity">Số lượng:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100">
-                    <button type="submit">Đặt mua ngay</button>
-                </form>
+        <section class="detail-content">
+            <div class="detail-image">
+                <img src="images/ca-phe-buon-ma-thuot.jpg" alt="Cà Phê Buôn Ma Thuột túi 500g">
             </div>
-        </article>
+
+            <div class="detail-info">
+                <p class="price">Giá bán: 150.000 VNĐ</p>
+                
+                <h2>Mô tả sản phẩm</h2>
+                <p>Cà phê Robusta Buôn Ma Thuột được chọn lọc từ những trái cà phê chín đỏ trên đất đỏ bazan. Được rang xay theo phương pháp truyền thống, giữ trọn hương vị đậm đà và mùi thơm nồng nàn đặc trưng.</p>
+
+                <!-- Bắt buộc dùng thẻ <dl> chứa thông tin -->
+                <h2>Thông tin chi tiết</h2>
+                <dl class="specs-list">
+                    <dt>Xuất xứ:</dt>
+                    <dd>TP. Buôn Ma Thuột, Tỉnh Đắk Lắk</dd>
+                    
+                    <dt>Khối lượng:</dt>
+                    <dd>500g / gói</dd>
+                    
+                    <dt>Hạn sử dụng:</dt>
+                    <dd>12 tháng kể từ ngày sản xuất</dd>
+                    
+                    <dt>Cách bảo quản:</dt>
+                    <dd>Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp</dd>
+                </dl>
+
+                <!-- Bắt buộc có nhóm nút hành động -->
+                <div class="action-buttons">
+                    <button type="button" class="btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="contact.html" class="btn-secondary">Liên hệ tư vấn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bắt buộc có khu vực Sản phẩm liên quan -->
+        <section class="related-products">
+            <h2>Sản Phẩm Liên Quan</h2>
+            <div class="related-grid">
+                <article class="product">
+                    <img src="images/mat-ong-rung-tay-nguyen.jpg" alt="Mật ong rừng">
+                    <h3>Mật Ong Rừng</h3>
+                    <p class="price">Giá: 220.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Mật Ong Rừng</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/mac-ca-tay-nguyen.jpg" alt="Hạt mắc ca">
+                    <h3>Hạt Mắc Ca</h3>
+                    <p class="price">Giá: 180.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Hạt Mắc Ca</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/tieu-dak-nong.jpg" alt="Tiêu Đắk Nông">
+                    <h3>Tiêu Đắk Nông</h3>
+                    <p class="price">Giá: 90.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Tiêu Đắk Nông</a>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
