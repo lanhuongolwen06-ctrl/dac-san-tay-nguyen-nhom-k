@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên Hệ - Đặc Sản Tây Nguyên</title>
+    <meta name="description" content="Trang liên hệ, gửi yêu cầu tư vấn và đặt hàng đặc sản Tây Nguyên.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Đặc Sản Tây Nguyên</h1>
+        <div class="logo">
+            <h1>Đặc Sản Tây Nguyên</h1>
+            <p>Tinh hoa núi rừng trong từng sản phẩm</p>
+        </div>
         <nav>
             <a href="index.html">Trang chủ</a> | 
             <a href="products.html">Sản phẩm</a> | 
@@ -18,35 +22,59 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Thông Tin Liên Hệ & Đặt Hàng</h2>
+    <main class="contact-page-layout">
+        <!-- Tiêu đề <h1> bắt buộc -->
+        <h1>Liên Hệ & Đặt Hàng</h1>
+        <p class="page-desc">Quý khách vui lòng điền thông tin vào form dưới đây hoặc liên hệ trực tiếp với chúng tôi để được tư vấn nhanh nhất.</p>
 
-        <!-- Thông tin liên hệ trực tiếp -->
-        <section class="contact-info">
-            <p><strong>Địa chỉ:</strong> TP. Buôn Ma Thuột, Đắk Lắk</p>
-            <p><strong>Điện thoại:</strong> 0905 123 456</p>
-            <p><strong>Email:</strong> dacsantaynguyen@gmail.com</p>
-        </section>
+        <div class="contact-container">
+            <!-- Form liên hệ đầy đủ các trường yêu cầu -->
+            <form action="#" method="POST" class="contact-form">
+                <div>
+                    <label for="fullname">Họ và tên:</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A">
+                </div>
 
-        <!-- Form gửi thông tin đặt hàng / liên hệ -->
-        <section class="contact-form">
-            <h3>Gửi Tin Nhắn / Đặt Hàng</h3>
-            <form action="#" method="POST">
-                <p>
-                    <label for="name">Họ và tên:</label><br>
-                    <input type="text" id="name" name="name" required>
-                </p>
-                <p>
-                    <label for="phone">Số điện thoại:</label><br>
-                    <input type="tel" id="phone" name="phone" required>
-                </p>
-                <p>
-                    <label for="message">Nội dung / Đơn hàng:</label><br>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </p>
-                <button type="submit">Gửi liên hệ</button>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="nguyenvana@gmail.com">
+                </div>
+
+                <div>
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="0905123456">
+                </div>
+
+                <div>
+                    <label for="product-interest">Sản phẩm quan tâm:</label>
+                    <select id="product-interest" name="product_interest">
+                        <option value="">-- Chọn sản phẩm --</option>
+                        <option value="ca-phe">Cà Phê Buôn Ma Thuột</option>
+                        <option value="mat-ong">Mật Ong Rừng</option>
+                        <option value="bo-sap">Bơ Sáp Đắk Lắk</option>
+                        <option value="mac-ca">Hạt Mắc Ca</option>
+                        <option value="tieu">Tiêu Đắk Nông</option>
+                        <option value="tho-cam">Thổ Cẩm Tây Nguyên</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Nội dung liên hệ:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Nhập nội dung tư vấn hoặc đơn hàng..."></textarea>
+                </div>
+
+                <button type="submit">Gửi tin nhắn liên hệ</button>
             </form>
-        </section>
+
+            <!-- Thông tin liên hệ bổ sung -->
+            <aside class="contact-info">
+                <h2>Thông Tin Trực Tiếp</h2>
+                <p><strong>Địa chỉ:</strong> TP. Buôn Ma Thuột, Tỉnh Đắk Lắk</p>
+                <p><strong>Điện thoại:</strong> 0905 123 456</p>
+                <p><strong>Email:</strong> dacsantaynguyen@gmail.com</p>
+                <p><strong>Thời gian làm việc:</strong> 8:00 - 17:30 (Thứ 2 - Chủ Nhật)</p>
+            </aside>
+        </div>
     </main>
 
     <footer>
