@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm - Đặc Sản Tây Nguyên</title>
+    <title>Danh Sách Sản Phẩm - Đặc Sản Tây Nguyên</title>
+    <meta name="description" content="Danh sách đầy đủ các sản phẩm nông sản, đặc sản Tây Nguyên chính hiệu.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Đặc Sản Tây Nguyên</h1>
+        <div class="logo">
+            <h1>Đặc Sản Tây Nguyên</h1>
+            <p>Tinh hoa núi rừng trong từng sản phẩm</p>
+        </div>
         <nav>
             <a href="index.html">Trang chủ</a> | 
             <a href="products.html">Sản phẩm</a> | 
@@ -18,65 +22,86 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Danh Sách Sản Phẩm</h2>
-
-        <!-- Tìm kiếm & Lọc -->
-        <form>
-            <input type="text" placeholder="Tìm sản phẩm...">
-            <select>
-                <option value="">Tất cả danh mục</option>
-                <option value="ca-phe">Cà phê</option>
-                <option value="nong-san">Nông sản</option>
-                <option value="khac">Khác</option>
-            </select>
-            <button type="submit">Lọc</button>
-        </form>
-
-        <!-- Danh sách 6 sản phẩm -->
-        <section class="products">
-            <article>
-                <img src="images/ca-phe-buon-ma-thuot.jpg" alt="Cà phê" width="150">
-                <h3>Cà Phê Buôn Ma Thuột</h3>
-                <p>Giá: 150.000 VNĐ</p>
-                <a href="product-detail.html">Xem chi tiết</a>
-            </article>
-
-            <article>
-                <img src="images/mat-ong-rung-tay-nguyen.jpg" alt="Mật ong" width="150">
-                <h3>Mật Ong Rừng</h3>
-                <p>Giá: 220.000 VNĐ</p>
-                <a href="product-detail.html">Xem chi tiết</a>
-            </article>
-
-            <article>
-                <img src="images/bo-sap-dak-lak.jpg" alt="Bơ sáp" width="150">
-                <h3>Bơ Sáp Đắk Lắk</h3>
-                <p>Giá: 60.000 VNĐ</p>
-                <a href="product-detail.html">Xem chi tiết</a>
-            </article>
-
-            <article>
-                <img src="images/mac-ca-tay-nguyen.jpg" alt="Hạt mắc ca" width="150">
-                <h3>Hạt Mắc Ca</h3>
-                <p>Giá: 180.000 VNĐ</p>
-                <a href="product-detail.html">Xem chi tiết</a>
-            </article>
-
-            <article>
-                <img src="images/tieu-dak-nong.jpg" alt="Tiêu Đắk Nông" width="150">
-                <h3>Tiêu Đắk Nông</h3>
-                <p>Giá: 90.000 VNĐ</p>
-                <a href="product-detail.html">Xem chi tiết</a>
-            </article>
-
-            <article>
-                <img src="images/tho-cam-tay-nguyen.jpg" alt="Thổ cẩm" width="150">
-                <h3>Thổ Cẩm Tây Nguyên</h3>
-                <p>Giá: 250.000 VNĐ</p>
-                <a href="product-detail.html">Xem chi tiết</a>
-            </article>
+    <main class="products-page-layout">
+        <section class="page-intro">
+            <h1>Danh Sách Đặc Sản Tây Nguyên</h1>
+            <p>Khám phá trọn bộ các mặt hàng nông sản khô, trái cây tươi và quà tặng đặc trưng Tây Nguyên.</p>
         </section>
+
+        <div class="products-layout">
+            <!-- Bắt buộc dùng thẻ <aside> cho bộ lọc -->
+            <aside class="filter-sidebar">
+                <h2>Bộ Lọc Sản Phẩm</h2>
+                <form action="#" method="GET">
+                    <div>
+                        <label for="search">Tìm kiếm:</label>
+                        <input type="text" id="search" name="search" placeholder="Nhập tên đặc sản...">
+                    </div>
+                    <div>
+                        <label for="category">Danh mục:</label>
+                        <select id="category" name="category">
+                            <option value="">Tất cả danh mục</option>
+                            <option value="ca-phe">Cà phê & Đồ uống</option>
+                            <option value="nong-san">Nông sản khô</option>
+                            <option value="trai-cay">Trái cây tươi</option>
+                            <option value="thu-cong">Thủ công mỹ nghệ</option>
+                        </select>
+                    </div>
+                    <button type="submit">Lọc sản phẩm</button>
+                </form>
+            </aside>
+
+            <!-- Grid danh sách 6 sản phẩm -->
+            <section class="product-grid">
+                <article class="product">
+                    <img src="images/ca-phe-buon-ma-thuot.jpg" alt="Cà phê Buôn Ma Thuột rang xay">
+                    <h3>Cà Phê Buôn Ma Thuột</h3>
+                    <p class="description">Hạt cà phê Robusta rang xay đậm đà hương vị núi rừng.</p>
+                    <p class="price">Giá: 150.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Cà Phê Buôn Ma Thuột</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/mat-ong-rung-tay-nguyen.jpg" alt="Mật ong rừng Tây Nguyên nguyên chất">
+                    <h3>Mật Ong Rừng Tây Nguyên</h3>
+                    <p class="description">Mật ong hoa rừng tự nhiên 100%, thơm ngọt sánh mịn.</p>
+                    <p class="price">Giá: 220.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Mật Ong Rừng</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/bo-sap-dak-lak.jpg" alt="Bơ sáp Đắk Lắk dẻo béo">
+                    <h3>Bơ Sáp Đắk Lắk</h3>
+                    <p class="description">Bơ sáp loại 1, thịt vàng dẻo quánh, giàu dinh dưỡng.</p>
+                    <p class="price">Giá: 60.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Bơ Sáp Đắk Lắk</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/mac-ca-tay-nguyen.jpg" alt="Hạt mắc ca Tây Nguyên sấy giòn">
+                    <h3>Hạt Mắc Ca Tây Nguyên</h3>
+                    <p class="description">Nữ hoàng hạt khô, nứt vỏ tự nhiên, béo bùi giòn tan.</p>
+                    <p class="price">Giá: 180.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Hạt Mắc Ca</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/tieu-dak-nong.jpg" alt="Hạt tiêu Đắk Nông thơm nồng">
+                    <h3>Tiêu Đắk Nông</h3>
+                    <p class="description">Hạt tiêu đen hạt săn chắc, cay nồng thơm đặc trưng.</p>
+                    <p class="price">Giá: 90.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Tiêu Đắk Nông</a>
+                </article>
+
+                <article class="product">
+                    <img src="images/tho-cam-tay-nguyen.jpg" alt="Tấm thổ cẩm dệt tay Tây Nguyên">
+                    <h3>Thổ Cẩm Tây Nguyên</h3>
+                    <p class="description">Sản phẩm dệt thủ công tinh xảo của đồng bào Ê Đê.</p>
+                    <p class="price">Giá: 250.000 VNĐ</p>
+                    <a href="product-detail.html">Xem chi tiết Thổ Cẩm</a>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer>
